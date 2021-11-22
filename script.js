@@ -21,10 +21,10 @@ function compute() {
   }  
 
   //result text
-  var result = "If you deposit " + principal.value + ", <br/>" +
-    "at an interest rate of " + rate + "%. <br/>" +
-    "You will receive an amount of " + interest + ", <br/>" +
-    "in the year " + year;
+  var result = "If you deposit <span>" + principal.value + "</span>, <br/>" +
+    "at an interest rate of <span>" + rate + "%</span>. <br/>" +
+    "You will receive an amount of <span>" + interest + "</span>, <br/>" +
+    "in the year <span>" + year + "</span>";
 
   document.getElementById("result").innerHTML = result;
 }
@@ -34,5 +34,5 @@ function compute() {
  */
 function updateRate() {
   var rateval = document.getElementById("rate").value;
-  document.getElementById("rate_val").innerText = rateval;
+  document.getElementById("rate_val").innerText = rateval + "%";
 }
